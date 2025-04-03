@@ -47,5 +47,8 @@ TagManager:
   - name: Actor
     uniqueID: 1717330243
     locked: 0
+  - name: Interactable
+    uniqueID: 2936572945
+    locked: 0
   m_RenderingLayers:
   - Default
