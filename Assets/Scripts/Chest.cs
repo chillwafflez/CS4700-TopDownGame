@@ -11,7 +11,8 @@ public class Chest : Collectable
         {
             collected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest; // after collected, update the chest's sprite
-            Debug.Log("Grant " + pesosAmount + " pesos!");
+            //Debug.Log("Grant " + pesosAmount + " pesos!");
+            GameManager.instance.ShowText("+" + pesosAmount + " pesos!", 25, Color.yellow, transform.position, Vector3.up * 50, 1.0f);
         }
 
         //base.OnCollect();
