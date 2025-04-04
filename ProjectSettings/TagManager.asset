@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Fighter
   layers:
   - Default
   - TransparentFX
@@ -47,8 +48,14 @@ TagManager:
   - name: Actor
     uniqueID: 1717330243
     locked: 0
+  - name: Wall
+    uniqueID: 1083882033
+    locked: 0
   - name: Interactable
     uniqueID: 2936572945
+    locked: 0
+  - name: Weapon
+    uniqueID: 3771425137
     locked: 0
   m_RenderingLayers:
   - Default

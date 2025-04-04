@@ -293,13 +293,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_1
+      name: Weapon_0
       rect:
         serializedVersion: 2
         x: 147
-        y: 224
+        y: 225
         width: 10
-        height: 23
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,13 +315,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_2
+      name: Weapon_1
       rect:
         serializedVersion: 2
-        x: 162
-        y: 224
-        width: 12
-        height: 23
+        x: 163
+        y: 225
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,13 +337,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_3
+      name: Weapon_2
       rect:
         serializedVersion: 2
-        x: 178
-        y: 224
-        width: 12
-        height: 23
+        x: 179
+        y: 225
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,13 +359,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_4
+      name: Weapon_3
       rect:
         serializedVersion: 2
-        x: 194
-        y: 224
-        width: 12
-        height: 23
+        x: 195
+        y: 225
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -384,10 +384,10 @@ TextureImporter:
       name: 0x72_16x16DungeonTileset.v5_5
       rect:
         serializedVersion: 2
-        x: 210
-        y: 224
-        width: 12
-        height: 27
+        x: 211
+        y: 225
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,13 +403,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_6
+      name: Weapon_4
       rect:
         serializedVersion: 2
         x: 228
-        y: 224
+        y: 225
         width: 10
-        height: 29
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,13 +535,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_12
+      name: Weapon_5
       rect:
         serializedVersion: 2
-        x: 146
-        y: 192
-        width: 12
-        height: 23
+        x: 147
+        y: 193
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -557,13 +557,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_13
+      name: Weapon_6
       rect:
         serializedVersion: 2
-        x: 162
-        y: 192
-        width: 12
-        height: 31
+        x: 163
+        y: 193
+        width: 10
+        height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2523,7 +2523,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2545,7 +2545,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2554,6 +2554,28 @@ TextureImporter:
       bones: []
       spriteID: 06a63e6784f16b845aa8bf88b2216519
       internalID: 1906929378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abac95fc4b46ff54ea0bb11c5a6f1cbc
+      internalID: 1655178117
       vertices: []
       indices: 
       edges: []
@@ -2573,23 +2595,18 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       0x72_16x16DungeonTileset.v5_0: -4032449147605997190
-      0x72_16x16DungeonTileset.v5_1: 4840290972086889215
       0x72_16x16DungeonTileset.v5_10: 7280512214869645652
       0x72_16x16DungeonTileset.v5_11: 2631768738938801831
-      0x72_16x16DungeonTileset.v5_12: 7086858349940441145
-      0x72_16x16DungeonTileset.v5_13: 8060563030506529066
       0x72_16x16DungeonTileset.v5_14: -6366687188651603090
       0x72_16x16DungeonTileset.v5_15: 4326481270412157315
       0x72_16x16DungeonTileset.v5_16: 3868107513445308080
       0x72_16x16DungeonTileset.v5_17: 8978345494583110313
       0x72_16x16DungeonTileset.v5_18: 5045583474800071437
       0x72_16x16DungeonTileset.v5_19: -7925865187794063637
-      0x72_16x16DungeonTileset.v5_2: -6804814063583718313
       0x72_16x16DungeonTileset.v5_20: -5800314820125828504
       0x72_16x16DungeonTileset.v5_21: -8234159623630029852
       0x72_16x16DungeonTileset.v5_22: -6090010426026576118
       0x72_16x16DungeonTileset.v5_23: -5016946315844774591
-      0x72_16x16DungeonTileset.v5_3: -6848334295082469151
       0x72_16x16DungeonTileset.v5_31: -60591872121546124
       0x72_16x16DungeonTileset.v5_32: -4248498523210886803
       0x72_16x16DungeonTileset.v5_33: 8928679839934948527
@@ -2598,7 +2615,6 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_37: -4225732625434409378
       0x72_16x16DungeonTileset.v5_38: -9040680487378906775
       0x72_16x16DungeonTileset.v5_39: -2901204259075527947
-      0x72_16x16DungeonTileset.v5_4: -5139836902402569518
       0x72_16x16DungeonTileset.v5_40: 4140425935124934206
       0x72_16x16DungeonTileset.v5_41: 3372251247818160855
       0x72_16x16DungeonTileset.v5_42: 3574896383938289798
@@ -2616,7 +2632,6 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_55: 3536006749572579530
       0x72_16x16DungeonTileset.v5_56: -5816369162784052947
       0x72_16x16DungeonTileset.v5_57: -5188864897432354570
-      0x72_16x16DungeonTileset.v5_6: 1194522240913290493
       0x72_16x16DungeonTileset.v5_7: 6372405238226718235
       0x72_16x16DungeonTileset.v5_8: 5940745270654208327
       0x72_16x16DungeonTileset.v5_9: -8636704302542761895
@@ -2627,6 +2642,7 @@ TextureImporter:
       Crate_1: 1938119533
       Crate_2: 1256526235
       Crate_3: 1787936530
+      Enemy_0: 1655178117
       Floor_0: 107895286
       Floor_1: 1496183474
       Floor_10: -788800194
@@ -2674,6 +2690,13 @@ TextureImporter:
       Wall_7: -1968105488
       Wall_8: 1444632364
       Wall_9: -1580822669
+      Weapon_0: 4840290972086889215
+      Weapon_1: -6804814063583718313
+      Weapon_2: -6848334295082469151
+      Weapon_3: -5139836902402569518
+      Weapon_4: 1194522240913290493
+      Weapon_5: 7086858349940441145
+      Weapon_6: 8060563030506529066
       Weird_Human_0: -284083276206249529
       Weird_Human_1: 3910368631869222354
   mipmapLimitGroupName: 
