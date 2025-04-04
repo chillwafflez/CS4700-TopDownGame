@@ -11,6 +11,7 @@ public class Weapon : Collidable
     private SpriteRenderer spriteRenderer;
 
     // swing
+    private Animator animator;
     private float coolDown = 0.5f;  // swing cooldown
     private float lastSwing;
 
@@ -19,6 +20,7 @@ public class Weapon : Collidable
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();    // we're getting the component called SpriteRenderer to update the weapon's sprite
                                                             // so once we upgrade it we can update the weapon sprite
+        animator = GetComponent<Animator>();
     }
 
     protected override void Update()
@@ -58,7 +60,8 @@ public class Weapon : Collidable
 
     private void Swing()
     {
-        Debug.Log("just swung weapon");
+        animator.SetTrigger("Swing");
+
     }
 
 
