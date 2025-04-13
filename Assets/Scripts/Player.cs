@@ -9,7 +9,13 @@ public class Player : Mover // Player <- Mover <- Fighter -< MonoBehavior
         base.Start();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
+    }
+
+    protected override void ReceiveDamage(Damage dmg)
+    {
+        base.ReceiveDamage(dmg);
+        GameManager.instance.OnHitPointChange();
     }
 
     private void FixedUpdate()
@@ -48,6 +54,7 @@ public class Player : Mover // Player <- Mover <- Fighter -< MonoBehavior
         if (hitPoint > maxHitPoint)
             hitPoint = maxHitPoint;
         GameManager.instance.ShowText("+" + healingAmount.ToString() + "hp", 25, Color.green, transform.position, Vector3.up * 30, 1.05f);
+        GameManager.instance.OnHitPointChange();
 
     }
 }

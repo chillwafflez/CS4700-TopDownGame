@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             Destroy(player.gameObject);
             Destroy(floatingTextManager.gameObject);
+            Destroy(hud);
+            Destroy(menu);
             return;
         }
 
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;  // every time we enter a new scene we called LoadState
-        DontDestroyOnLoad(gameObject);  // this ensures that as soon as u start the game or change scenes, the GameManager will persist across scenes (whether it be main or Dungeon1, etc.)
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // resources
@@ -36,6 +38,9 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
+    public RectTransform hitPointBar;
+    public GameObject hud;
+    public GameObject menu;
 
     // logic
     public int pesos;
@@ -64,6 +69,13 @@ public class GameManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    // Hitpoint Bar
+    public void OnHitPointChange()
+    {
+        float ratio = (float)player.hitPoint / (float)player.maxHitPoint;
+        hitPointBar.localScale = new Vector3(1, ratio, 1);
     }
 
     private void Update()
@@ -118,9 +130,16 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Player leveled up!");
         player.OnLevelUp();
+        OnHitPointChange();
     }
 
 
+    // On Scene Loaded
+    public void OnSceneLoaded(Scene s, LoadSceneMode mode)
+    {
+        // spawn the player at the SpawnPoint gameobject whenever they enter a scene
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
+    }
 
     // Save state
     /* 
@@ -139,16 +158,16 @@ public class GameManager : MonoBehaviour
         s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
-        Debug.Log("Save State");
     }
 
     public void LoadState(Scene s, LoadSceneMode mode) 
     {
+        SceneManager.sceneLoaded -= LoadState;
+
         if (!PlayerPrefs.HasKey("SaveState"))
             return;
 
-        string[] data = PlayerPrefs.GetString("SaveState").Split('|');
-        // exp: assume u have sum like this: '0|10|15|2' this puts it into an array: [0, 10, 15, 2]
+        string[] data = PlayerPrefs.GetString("SaveState").Split('|'); // exp: assume u have sum like this: '0|10|15|2' this puts it into an array: [0, 10, 15, 2]
 
         // change player skin
 
@@ -162,12 +181,6 @@ public class GameManager : MonoBehaviour
 
         // change weapon level
         weapon.SetWeaponLevel(int.Parse(data[3]));
-
-
-
-        Debug.Log("Load State");
-        // spawn the player at the SpawnPoint gameobject whenever they enter a scene
-        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
 
 
