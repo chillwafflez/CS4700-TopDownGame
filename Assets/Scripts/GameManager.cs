@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
         if (GameManager.instance != null)
         {
             Destroy(gameObject);
+            Destroy(player.gameObject);
+            Destroy(floatingTextManager.gameObject);
             return;
         }
 
@@ -32,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     // references (to diff things such as the player script, weapon script, etc.)
     public Player player;
-    // public Weapon weapon; etc
+    public Weapon weapon;
     public FloatingTextManager floatingTextManager;
 
     // logic
@@ -45,6 +47,79 @@ public class GameManager : MonoBehaviour
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
     }
+    
+
+    // Upgrade weapon logic
+    public bool TryUpgradeWeapon()
+    {
+        // is the weapon max level? if so return false meaning we cant upgade anymore
+        if (weaponPrices.Count <= weapon.weaponLevel)
+            return false;
+
+        if (pesos >= weaponPrices[weapon.weaponLevel])
+        {
+            pesos -= weaponPrices[weapon.weaponLevel];
+            weapon.UpgradeWeapon();
+            return true;
+        }
+
+        return false;
+    }
+
+    private void Update()
+    {
+        //Debug.Log(GetCurrentLevel());
+    }
+
+    // Experience system
+    public int GetCurrentLevel()
+    {
+        int r = 0;
+        int add = 0;
+
+        while (experience >= add)
+        {
+            add += xpTable[r];
+            r++;
+
+            if (r == xpTable.Count) // if we at max level
+            {
+                return r;
+            }
+        }
+
+        return r;
+    }
+
+    public int GetXpToLevel(int level)
+    {
+        int r = 0;
+        int xp = 0;
+
+        while (r < level)
+        {
+            xp += xpTable[r];
+            r++;
+        }
+        return xp;
+    }
+
+    public void GrantXP(int xp)
+    {
+        int currLevel = GetCurrentLevel();
+        experience += xp;
+        if (currLevel < GetCurrentLevel())  // if current level is the same after we got xp, we didnt level up
+        {
+            OnLevelUp();
+        }
+    }
+
+    public void OnLevelUp()
+    {
+        Debug.Log("Player leveled up!");
+        player.OnLevelUp();
+    }
+
 
 
     // Save state
@@ -61,7 +136,7 @@ public class GameManager : MonoBehaviour
         s += "0" + "|";
         s += pesos.ToString() + "|";
         s += experience.ToString() + "|";
-        s += "0";
+        s += weapon.weaponLevel.ToString();
 
         PlayerPrefs.SetString("SaveState", s);
         Debug.Log("Save State");
@@ -82,9 +157,18 @@ public class GameManager : MonoBehaviour
 
         // change experience
         experience = int.Parse(data[2]);
+        if (GetCurrentLevel() != 1)
+            player.SetLevel(GetCurrentLevel());
 
         // change weapon level
+        weapon.SetWeaponLevel(int.Parse(data[3]));
+
+
 
         Debug.Log("Load State");
+        // spawn the player at the SpawnPoint gameobject whenever they enter a scene
+        player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
+
+
 }

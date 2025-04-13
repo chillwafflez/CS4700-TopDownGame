@@ -222,7 +222,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 99
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2567,7 +2567,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2576,6 +2576,28 @@ TextureImporter:
       bones: []
       spriteID: abac95fc4b46ff54ea0bb11c5a6f1cbc
       internalID: 1655178117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Menu_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8439ad8d46f0e47a87e58721febf15
+      internalID: -1310248113
       vertices: []
       indices: 
       edges: []
@@ -2659,6 +2681,7 @@ TextureImporter:
       HealingFountain_0: 132162535
       HealingFountain_1: -924101126
       HealingFountain_2: 1007519104
+      Menu_0: -1310248113
       Pillar_0: -267562319
       Pillar_1: 1426264235
       Pillar_2: 3110365786592855618

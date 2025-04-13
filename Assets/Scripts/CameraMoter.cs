@@ -2,9 +2,14 @@ using UnityEngine;
 
 public class CameraMoter : MonoBehaviour
 {
-    public Transform lookAt;
+    private Transform lookAt;
     public float boundX = 0.15f;
     public float boundY = 0.05f;
+
+    private void Start()
+    {
+        lookAt = GameObject.Find("Player").transform;
+    }
 
     // we use LateUpdate bcuz its called after Update and FixedUpdate. since we are moving our player in FixedUpdate
     // we have to make sure we move the camera AFTER the player moves bcuz if we dont there will be a slight desync

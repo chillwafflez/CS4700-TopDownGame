@@ -77,7 +77,7 @@ public class Enemy : Mover
         Destroy(gameObject); 
 
         // rewards Player for kill
-        GameManager.instance.experience += xpValue;
+        GameManager.instance.GrantXP(xpValue);
         GameManager.instance.ShowText("+" + xpValue + " xp", 30, Color.magenta, transform.position, Vector3.up * 40, 1.0f);
     }
 }
