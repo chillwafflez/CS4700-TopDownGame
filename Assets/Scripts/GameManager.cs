@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     public Weapon weapon;
     public FloatingTextManager floatingTextManager;
     public RectTransform hitPointBar;
+    public Animator deathMenuAnim;
     public GameObject hud;
     public GameObject menu;
 
@@ -140,6 +141,15 @@ public class GameManager : MonoBehaviour
         // spawn the player at the SpawnPoint gameobject whenever they enter a scene
         player.transform.position = GameObject.Find("SpawnPoint").transform.position;
     }
+
+    // Death Menu and Respawn
+    public void Respawn()
+    {
+        deathMenuAnim.SetTrigger("Hide");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        player.Respawn();
+    }
+
 
     // Save state
     /* 

@@ -975,13 +975,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_32
+      name: Boss_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 47
-        width: 34
-        height: 33
+        x: 160
+        y: 48
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2589,7 +2589,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2598,6 +2598,28 @@ TextureImporter:
       bones: []
       spriteID: ea8439ad8d46f0e47a87e58721febf15
       internalID: -1310248113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de977703706e7d04c8649ed41003ae55
+      internalID: -1963315085
       vertices: []
       indices: 
       edges: []
@@ -2630,7 +2652,6 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_22: -6090010426026576118
       0x72_16x16DungeonTileset.v5_23: -5016946315844774591
       0x72_16x16DungeonTileset.v5_31: -60591872121546124
-      0x72_16x16DungeonTileset.v5_32: -4248498523210886803
       0x72_16x16DungeonTileset.v5_33: 8928679839934948527
       0x72_16x16DungeonTileset.v5_35: -3501787253567053427
       0x72_16x16DungeonTileset.v5_36: -5852343063375702158
@@ -2658,6 +2679,7 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_8: 5940745270654208327
       0x72_16x16DungeonTileset.v5_9: -8636704302542761895
       Atlas_0: -598166085
+      Boss_0: -4248498523210886803
       Chest_0: 1906929378
       Chest_1: 919880266
       Crate_0: -1035376332
@@ -2665,6 +2687,7 @@ TextureImporter:
       Crate_2: 1256526235
       Crate_3: 1787936530
       Enemy_0: 1655178117
+      Enemy_1: -1963315085
       Floor_0: 107895286
       Floor_1: 1496183474
       Floor_10: -788800194
