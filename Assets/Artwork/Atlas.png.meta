@@ -274,10 +274,10 @@ TextureImporter:
       name: 0x72_16x16DungeonTileset.v5_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 47
-        width: 147
-        height: 209
+        x: 77
+        y: 7
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,13 +469,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_9
+      name: Big_ah_door
       rect:
         serializedVersion: 2
-        x: 351
-        y: 207
-        width: 66
-        height: 34
+        x: 352
+        y: 208
+        width: 64
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,13 +491,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_10
+      name: Open_big_ah_door
       rect:
         serializedVersion: 2
-        x: 431
-        y: 207
-        width: 34
-        height: 34
+        x: 432
+        y: 208
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2449,13 +2449,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_0
+      name: Dirty_floor_0
       rect:
         serializedVersion: 2
-        x: 256
-        y: 95
-        width: 15
-        height: 15
+        x: 128
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2611,7 +2611,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2620,6 +2620,512 @@ TextureImporter:
       bones: []
       spriteID: de977703706e7d04c8649ed41003ae55
       internalID: -1963315085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_wall_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792fda3492f79f14bbf08c6f4b65a6ec
+      internalID: 2100257817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_wall_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4701a63ab306f43aff0cf247383da4
+      internalID: -864235726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chiseled_wall_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4d6cee18a7dec49ae63df20f4befc9
+      internalID: 2052254971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chiseled_wall_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128cfbbaf76cd3a4da74c31198e702b5
+      internalID: 85490386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chiseled_wall_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8679d920f8cd9f49adb15c89562fa1f
+      internalID: -2145342005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skull
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37736a897ab7c0441b02f7e3a59d4a0c
+      internalID: -1654449321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8543407f1e7c8ea4ca647040c2e69472
+      internalID: -1087384199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1d55f68545573746afae1f7062c0f69
+      internalID: 2021528621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1993ec1f3317ee4aac3ede809dd50dc
+      internalID: 844854889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Orc_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d588cabfd5892eb41be710e6f1766d6a
+      internalID: 77998078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328ef6ab9f1bdda46af01673444c7536
+      internalID: 1300998724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chiseled_wall_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5344e3acec5b13e449e43bbdc613d975
+      internalID: 1416827735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chiseled_wall_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db908408c676644a9bd00dedba1fa59
+      internalID: 1941075955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chiseled_wall_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9f5608d2eb2a84d89a47bade7c44f4
+      internalID: 1427121786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_flag_wall
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c16cc9c7ee03645a4071f7f3a37876
+      internalID: -342444318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_flag_wall
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f632070e017c24b93e2aca3bf79188
+      internalID: 1671992848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a80b8dbb1a1f74882af184dd7be73c
+      internalID: 985761377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36bbf2b7d4d6c143a0e940ba3b6d97c
+      internalID: 2091483285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3246a7aacae14546a59ec3283ae158d
+      internalID: -264187042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b02cbb20d820f84b9b13946b85aeb08
+      internalID: -613887191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_5
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66fc1fd653b8f04f9ce5086f91ae37a
+      internalID: 480184800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372d614b28c552840876ef5497a51339
+      internalID: 1468421988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirty_floor_7
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bf7b679f26b7f4bb53e78a5767a033
+      internalID: -1258081602
       vertices: []
       indices: 
       edges: []
@@ -2639,7 +3145,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       0x72_16x16DungeonTileset.v5_0: -4032449147605997190
-      0x72_16x16DungeonTileset.v5_10: 7280512214869645652
       0x72_16x16DungeonTileset.v5_11: 2631768738938801831
       0x72_16x16DungeonTileset.v5_14: -6366687188651603090
       0x72_16x16DungeonTileset.v5_15: 4326481270412157315
@@ -2677,15 +3182,29 @@ TextureImporter:
       0x72_16x16DungeonTileset.v5_57: -5188864897432354570
       0x72_16x16DungeonTileset.v5_7: 6372405238226718235
       0x72_16x16DungeonTileset.v5_8: 5940745270654208327
-      0x72_16x16DungeonTileset.v5_9: -8636704302542761895
-      Atlas_0: -598166085
+      Big_ah_door: -8636704302542761895
       Boss_0: -4248498523210886803
+      Boss_1: 1300998724
       Chest_0: 1906929378
       Chest_1: 919880266
+      Chiseled_wall_0: 2052254971
+      Chiseled_wall_1: 85490386
+      Chiseled_wall_2: -2145342005
+      Chiseled_wall_3: 1416827735
+      Chiseled_wall_4: 1941075955
+      Chiseled_wall_5: 1427121786
       Crate_0: -1035376332
       Crate_1: 1938119533
       Crate_2: 1256526235
       Crate_3: 1787936530
+      Dirty_floor_0: -598166085
+      Dirty_floor_1: 985761377
+      Dirty_floor_2: 2091483285
+      Dirty_floor_3: -264187042
+      Dirty_floor_4: -613887191
+      Dirty_floor_5: 480184800
+      Dirty_floor_6: 1468421988
+      Dirty_floor_7: -1258081602
       Enemy_0: 1655178117
       Enemy_1: -1963315085
       Floor_0: 107895286
@@ -2701,10 +3220,16 @@ TextureImporter:
       Floor_7: 29135901
       Floor_8: 724624449
       Floor_9: -1510537348
+      Green_flag_wall: 1671992848
       HealingFountain_0: 132162535
       HealingFountain_1: -924101126
       HealingFountain_2: 1007519104
       Menu_0: -1310248113
+      Open_big_ah_door: 7280512214869645652
+      Orc_0: -1087384199
+      Orc_1: 2021528621
+      Orc_2: 844854889
+      Orc_3: 77998078
       Pillar_0: -267562319
       Pillar_1: 1426264235
       Pillar_2: 3110365786592855618
@@ -2713,6 +3238,7 @@ TextureImporter:
       Pillar_Wall_2: 1351344622
       Player_0: 2103757656
       Player_1: -1825784229
+      Red_flag_wall: -342444318
       Stairs_0: 1434495551
       Stairs_1: 339140834
       Stairs_2: -1020809529
@@ -2745,6 +3271,9 @@ TextureImporter:
       Weapon_6: 8060563030506529066
       Weird_Human_0: -284083276206249529
       Weird_Human_1: 3910368631869222354
+      green_wall_0: 2100257817
+      green_wall_1: -864235726
+      skull: -1654449321
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
