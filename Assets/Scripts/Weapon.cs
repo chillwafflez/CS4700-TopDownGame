@@ -45,12 +45,23 @@ public class Weapon : Collidable
                 return;
 
             // create a new Damage object to send to the 'fighter' we hit
+            int baseDamage = damagePoint[weaponLevel];
+
+            // Try to get the player's damage multiplier
+            float finalMultiplier = 1f;
+            Player player = GameObject.FindWithTag("Player")?.GetComponent<Player>();
+            if (player != null)
+            {
+                finalMultiplier = player.GetDamageMultiplier();
+            }
+
             Damage dmg = new Damage
             {
-                damageAmount = damagePoint[weaponLevel],
+                damageAmount = Mathf.RoundToInt(baseDamage * finalMultiplier),
                 origin = transform.position,
                 pushForce = pushForce[weaponLevel]
             };
+
 
             other.SendMessage("ReceiveDamage", dmg);
 
