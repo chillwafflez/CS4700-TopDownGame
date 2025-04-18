@@ -1,84 +1,92 @@
-﻿using UnityEngine;
+﻿using System.ComponentModel;
+using UnityEngine;
 
 
 public class InventoryManager : MonoBehaviour
 {
-    public InventoryUI inventoryUI; // Assign in Inspector
-    public GameObject[] items;            // The actual item GameObjects (e.g., sprites under player)
-    private bool[] itemUnlocked;          // Which items are unlocked
-    private int currentItemIndex = 0;
+    public static InventoryManager instance;
 
-    public int GetCurrentItemIndex()
+    public InventorySlot[] inventorySlots;
+    public GameObject invetoryItemPrefab;
+    public Player player;
+
+    // Testing if items works
+    
+    public Item[] startItems;
+    private void Start()
     {
-        return currentItemIndex;
-    }
-
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
-
-    void Start()
-    {
-        itemUnlocked = new bool[items.Length];
-        itemUnlocked[0] = true; // Only item 1 is unlocked at the start
-        EquipItem(currentItemIndex);
-
-        if (inventoryUI != null)
+        foreach (var item in startItems)
         {
-            inventoryUI.SetSlotSelected(0);
-            inventoryUI.UnlockItem(0); // Unlock item 1 from the start
+            AddItem(item);
         }
     }
 
-    void Update()
+    // Allows InventroyManager to be accessed in every script
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1)) TrySelectItem(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2)) TrySelectItem(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3)) TrySelectItem(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) TrySelectItem(3);
+        instance = this;
     }
 
-    void TrySelectItem(int index)
+    // Add item from game into an empty slot
+    public bool AddItem(Item item)
     {
-        if (index < items.Length && itemUnlocked[index] && index != currentItemIndex)
+        // Find an empty slot
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
-            UnequipItem(currentItemIndex);
-            currentItemIndex = index;
-            EquipItem(currentItemIndex);
-            if (inventoryUI != null)
+            InventorySlot slot = inventorySlots[i];
+            if (slot.GetComponentInChildren<InventoryItem>() == null)
             {
-                inventoryUI.SetSlotSelected(index);
+                Debug.Log("Adding item");
+                SpawnNewItem(item, slot);
+                return true;
             }
         }
-
-        
+        return false;
     }
 
-    void EquipItem(int index)
+
+    // Create item in invetory
+    void SpawnNewItem(Item item, InventorySlot slot)
     {
-        if (items[index] != null)
-            items[index].SetActive(true);
+        GameObject newItemGO = Instantiate(invetoryItemPrefab, slot.transform);
+        InventoryItem inventoryItem = newItemGO.GetComponentInChildren<InventoryItem>();
+        inventoryItem.InitializeItem(item);
+        Debug.Log("Item added");
+        ActivateEffect(item);
     }
 
-    void UnequipItem(int index)
+    // Check if an item is in the inventory
+    public void ActivateEffect(Item item)
     {
-        if (items[index] != null)
-            items[index].SetActive(false);
-    }
-
-    public void UnlockItem(int index)
-    {
-        if (index >= 0 && index < itemUnlocked.Length)
+        if (item.itemIndex == 0)
         {
-            itemUnlocked[index] = true;
-            if (inventoryUI != null)
-            {
-                inventoryUI.UnlockItem(index);
-            }
-            Debug.Log("Unlocked item " + (index + 1));
-        }
+            player.IncreaseHealth();
 
-        
+        }
+        else if (item.itemIndex == 1)
+        {
+            player.IncreaseDamage();
+        }
+        else if (item.itemIndex == 2)
+        {
+            player.IncreaseSpeed();
+        }
+    }
+
+    public bool HasIngredients()
+    {
+        int num = 0;
+        foreach (var slot in inventorySlots)
+        {
+            if (slot.GetComponentInChildren<InventoryItem>() != null)
+            {
+                num++;
+            }
+        }
+        if (num == 3)
+        {
+            return true;
+        }
+        return false;
     }
 }

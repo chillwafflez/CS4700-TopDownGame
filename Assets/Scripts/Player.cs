@@ -106,6 +106,34 @@ public class Player : Mover // Player <- Mover <- Fighter -< MonoBehavior
         pushDirection = Vector3.zero;
     }
 
+    // Permanent effects
+    public void IncreaseHealth()
+    {
+        maxHitPoint = maxHitPoint * 2;
+        Heal(maxHitPoint);
+        Debug.Log("Health boost is active!");
+    }
+
+    public void IncreaseDamage()
+    {
+        isDamageBoosted = true;
+        damageBoostEndTime = Mathf.Infinity;
+
+        Debug.Log("Damage boost is active!");
+    }
+
+    public void IncreaseSpeed()
+    {
+        boostEndTime = Mathf.Infinity;
+        isSpeedBoosted = true;
+
+        xSpeed *= boostMultiplier;
+        ySpeed *= boostMultiplier;
+
+        Debug.Log("Speed boost is active!");
+    }
+
+    /* For temporary effects
     public bool TryHeal()
     {
         if (Time.time - lastHealTime >= healCooldown)
@@ -151,7 +179,7 @@ public class Player : Mover // Player <- Mover <- Fighter -< MonoBehavior
         Debug.Log("Damage boost is on cooldown.");
         return false;
     }
-
+    */
 
     public float GetDamageMultiplier()
     {

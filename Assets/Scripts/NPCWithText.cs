@@ -4,6 +4,7 @@ using UnityEngine;
 public class NewMonoBehaviourScript : Collidable
 {
     public string message;
+    public string endMessage;
     private float cooldown = 4.0f;
     private float lastShout;
 
@@ -13,6 +14,18 @@ public class NewMonoBehaviourScript : Collidable
         lastShout = -cooldown;
     }
     protected override void OnCollide(Collider2D other)
+    {
+        if (InventoryManager.instance.HasIngredients())
+        {
+            DisplayMessage();
+        }
+        else
+        {
+            DisplayMessage();
+        } 
+    }
+
+    public void DisplayMessage()
     {
         if (Time.time - lastShout > cooldown)
         {

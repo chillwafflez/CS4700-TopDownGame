@@ -7,7 +7,7 @@ public class InventoryUI : MonoBehaviour
     public Image[] itemIcons;          // The actual icons inside slots
     public Sprite selectedSprite;
     public Sprite notSelectedSprite;
-    public Sprite[] itemSprites;       // The icons for Item1ñ4
+    public Sprite[] itemSprites;       // The icons for Item1ÅE
 
     private int currentIndex = 0;
     void Awake()
