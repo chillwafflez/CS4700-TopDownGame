@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        //PlayerPrefs.DeleteAll(); // this line essentially 'starts over' clears the players stuff 
+        PlayerPrefs.DeleteAll(); // this line essentially 'starts over' clears the players stuff 
 
         instance = this;
         SceneManager.sceneLoaded += LoadState;  // every time we enter a new scene we called LoadState
@@ -147,6 +147,9 @@ public class GameManager : MonoBehaviour
     {
         deathMenuAnim.SetTrigger("Hide");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+
+        
+
         player.Respawn();
     }
 

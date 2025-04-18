@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     public Player player;
 
     // Testing if items works
-    
+    /*
     public Item[] startItems;
     private void Start()
     {
@@ -19,9 +19,9 @@ public class InventoryManager : MonoBehaviour
         {
             AddItem(item);
         }
-    }
+    }*/
 
-    // Allows InventroyManager to be accessed in every script
+    // Allows InventroyManager to be accessed in every script and no extra instance created
     private void Awake()
     {
         instance = this;
@@ -55,7 +55,7 @@ public class InventoryManager : MonoBehaviour
         ActivateEffect(item);
     }
 
-    // Check if an item is in the inventory
+    // Activate effect of items
     public void ActivateEffect(Item item)
     {
         if (item.itemIndex == 0)
@@ -73,6 +73,8 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    // For win condition
+    // If player has all 3 items then the they win
     public bool HasIngredients()
     {
         int num = 0;

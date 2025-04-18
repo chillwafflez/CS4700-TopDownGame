@@ -4,7 +4,7 @@ using UnityEngine;
 public class NewMonoBehaviourScript : Collidable
 {
     public string message;
-    public string endMessage;
+    public string winMessage;
     private float cooldown = 4.0f;
     private float lastShout;
 
@@ -17,20 +17,19 @@ public class NewMonoBehaviourScript : Collidable
     {
         if (InventoryManager.instance.HasIngredients())
         {
-            DisplayMessage();
+            if (Time.time - lastShout > cooldown)
+            {
+                lastShout = Time.time;
+                GameManager.instance.ShowText(winMessage, 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
+            }
         }
         else
         {
-            DisplayMessage();
+            if (Time.time - lastShout > cooldown)
+            {
+                lastShout = Time.time;
+                GameManager.instance.ShowText(message, 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
+            }
         } 
-    }
-
-    public void DisplayMessage()
-    {
-        if (Time.time - lastShout > cooldown)
-        {
-            lastShout = Time.time;
-            GameManager.instance.ShowText(message, 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
-        }
     }
 }
