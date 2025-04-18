@@ -11,7 +11,7 @@ public class InventoryManager : MonoBehaviour
     public Player player;
 
     // Testing if items works
-    /*
+    
     public Item[] startItems;
     private void Start()
     {
@@ -19,7 +19,7 @@ public class InventoryManager : MonoBehaviour
         {
             AddItem(item);
         }
-    }*/
+    }
 
     // Allows InventroyManager to be accessed in every script and no extra instance created
     private void Awake()
