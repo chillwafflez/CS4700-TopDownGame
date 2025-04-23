@@ -12,7 +12,6 @@ public class ItemPickup : MonoBehaviour
         {
             InventoryManager.instance.AddItem(item);
             Destroy(gameObject); // Remove pickup from the scene
-            
         }
     }
 }

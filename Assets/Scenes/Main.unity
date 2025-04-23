@@ -1261,7 +1261,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1374,7 +1374,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   message: Hello! Help me find the dinner ingredients!
-  winMessage: 
+  winMessage: Thank you for getting me the ingredients!
 --- !u!1 &303214340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1412,8 @@ MonoBehaviour:
   player: {fileID: 209159465}
   startItems:
   - {fileID: 11400000, guid: 885a83304fe7c5347ad334c7cb9beb60, type: 2}
+  - {fileID: 11400000, guid: 9b7cd6b276b373545b7e5a3b52dc4f61, type: 2}
+  - {fileID: 11400000, guid: 159b97322ee849d418ffcd6755b66633, type: 2}
 --- !u!4 &303214342
 Transform:
   m_ObjectHideFlags: 0

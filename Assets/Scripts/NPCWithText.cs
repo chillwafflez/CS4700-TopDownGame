@@ -13,7 +13,8 @@ public class NewMonoBehaviourScript : Collidable
         base.Start();
         lastShout = -cooldown;
     }
-    protected override void OnCollide(Collider2D other)
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (InventoryManager.instance.HasIngredients())
         {
@@ -30,6 +31,10 @@ public class NewMonoBehaviourScript : Collidable
                 lastShout = Time.time;
                 GameManager.instance.ShowText(message, 25, Color.white, transform.position + new Vector3(0, 0.16f, 0), Vector3.zero, cooldown);
             }
-        } 
+        }
+    }
+    protected override void OnCollide(Collider2D other)
+    {
+        
     }
 }

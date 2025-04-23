@@ -24,7 +24,19 @@ public class InventoryManager : MonoBehaviour
     // Allows InventroyManager to be accessed in every script and no extra instance created
     private void Awake()
     {
+        // If a duplicate exists and it's not this one...
+        if (instance != null)
+        {
+            // ...and this one is NOT the same as the original
+            if (instance != this)
+            {
+                Destroy(gameObject); // Destroy the duplicate from the scene
+            }
+            return;
+        }
+
         instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     // Add item from game into an empty slot
